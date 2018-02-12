@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#2d2d2d">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="shortcut icon" href="https://cdn.jcu.edu.au/1.0.0-beta.1/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jcu.edu.au/1.0.0-beta.1/css/jcu.min.css" integrity="sha384-yvalFRKl+0g0tWrYJQwXPaf4oRFo9hOu7BssvfScVX9wdvvA+NjYtnAFm3sqP7LF" crossorigin="anonymous">
+
+    <title><%=htmlWebpackPlugin.options.title%></title>
+    <!--
+      Hide the exception overlay.  React 16's error boundaries re-throw caught
+      exceptions in dev so you can see them visually.  We want to see
+      exceptions but not those already caught.
+
+      Workaround for https://github.com/facebook/react/issues/10474.
+    -->
+    <style>
+      body > iframe { display: none; }
+    </style>
+  </head>
+  <body role="application">
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+
+    <a class="sr-only sr-only-focusable" href="#main">
+      <div class="container bg-primary p-y-1">
+        Skip to main content
+      </div>
+    </a>
+
+    <main id="main" role="main">
+      <div id="app"></div>
+    </main>
+  </body>
+</html>
