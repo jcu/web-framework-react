@@ -2,15 +2,34 @@
   "name": "jcu-web-framework-react",
   "version": "0.1.0",
   "private": true,
+  "main": "lib/index.js",
   "scripts": {
     "start": "styleguidist server",
-    "build": "styleguidist build",
+    "build": "NODE_ENV=production babel --out-dir lib --copy-files --ignore 'src/styleguide,src/setupTests.js' src/",
+    "watch": "yarn build --watch",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "styleguide": "styleguidist server",
+    "styleguide": "yarn start",
     "styleguide:build": "styleguidist build"
   },
+  "babel": {
+    "presets": [
+      "env",
+      "react-app"
+    ],
+    "ignore": [
+      "src/styleguide"
+    ]
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
+  },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react-app": "^3.1.1",
     "enzyme": "^3.1.1",
     "enzyme-adapter-react-16": "^1.0.4",
     "enzyme-to-json": "^3.2.2",
