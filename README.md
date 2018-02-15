@@ -35,3 +35,13 @@ inteface using the commands respectively:
     yarn && yarn build
 
 Now, copy files located within `styleguide/` to your static web host.
+
+## Upgrading
+
+* To upgrade `react-scripts` (create-react-app), then follow the instructions
+  in the main
+  [README](https://github.com/facebook/create-react-app/blob/next/packages/react-scripts/template/README.md#updating-to-new-releases).
+
+* Ensure `eslint` version matches that which specified as a `react-scripts`
+  dependency.  If it's not exactly the same, `yarn start` will fail.  Ignore
+  its instructions and update our own `package.json` here.
