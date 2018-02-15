@@ -7,3 +7,4 @@
   https://github.com/styleguidist/react-styleguidist/tree/master/examples/customised and
   https://github.com/styleguidist/react-styleguidist/blob/master/examples/customised/styleguide/components/StyleGuide.js
 
+* Depend/extend on Bootstrap, react-bootstrap etc.
