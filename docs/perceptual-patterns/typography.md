@@ -1,5 +1,3 @@
-# Typography
-
 Generally large type size with a focus on readability.
 
 <!-- Need to clarify exactly when to use which fonts -->

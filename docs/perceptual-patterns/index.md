@@ -1,5 +1,3 @@
-# Perceptual patterns
-
 Perceptual patterns help to express brand image.
 
 ## Intro
