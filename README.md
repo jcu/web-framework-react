@@ -1,5 +1,6 @@
 # JCU Web Framework for React
 
+[![Build Status](https://travis-ci.org/jcu/web-framework-react.svg?branch=master)](https://travis-ci.org/jcu/web-framework-react)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 This package can be used in two different ways: as a library of React
