@@ -1,7 +1,7 @@
 {
-  "name": "jcu-web-framework-react",
+  "name": "@jcu/web-framework-react",
   "version": "0.1.0",
-  "private": true,
+  "license": "UNLICENSED",
   "main": "lib/index.js",
   "scripts": {
     "start": "styleguidist server",
