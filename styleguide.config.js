@@ -7,6 +7,7 @@ module.exports = {
   template: './public/index.html',
   theme,
   styles,
+  highlightTheme: 'jcu-light', // XXX To be removed on next release of styleguist
   editorConfig: {
     theme: 'jcu-light'
   },
@@ -17,8 +18,34 @@ module.exports = {
   },
   sections: [
     { name: 'Introduction', content: 'docs/introduction.md' },
-    { name: 'Components', components: 'src/components/**/*.js' },
-    { name: 'Layout', components: 'src/layout/**/*.js' }
+    {
+      name: 'Perceptual Patterns',
+      content: 'docs/perceptual-patterns/index.md',
+      sections: [
+        {
+          name: 'Typography',
+          content: 'docs/perceptual-patterns/typography.md'
+        },
+        {
+          name: 'Colours',
+          content: 'docs/perceptual-patterns/colours.md'
+        }
+      ]
+    },
+    {
+      name: 'Functional Patterns',
+      content: 'docs/functional-patterns/index.md',
+      sections: [
+        {
+          name: 'Components',
+          components: 'src/components/**/*.js'
+        },
+        {
+          name: 'Layout',
+          components: 'src/layout/**/*.js'
+        }
+      ]
+    }
   ],
   skipComponentsWithoutExample: true,
   getComponentPathLine (componentPath) {
