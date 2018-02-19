@@ -14,7 +14,7 @@ components or as the Living Style Guide for James Cook University.
 
 ## Development
 
-To set up for development, run the following:
+To set up for development, run the following to start the Styleguidist server:
 
     yarn
     yarn start
@@ -33,11 +33,35 @@ interface using the commands respectively:
     yarn test-inspect
     yarn test-inspect-cli
 
-## Deployment
+## Building the library
 
-    yarn && yarn build
+To build the underlying library for inclusion in other projects or for
+publishing to the `npm` package registry:
 
-Now, copy files located within `styleguide/` to your static web host.
+    yarn build
+
+You can now use the build in other projects locally (such as via `yarn link`).
+When you are ready to publish, do this:
+
+    # Update CHANGELOG.md and package.json and commit changes first!
+    yarn publish --access public
+
+Due to `yarn` [missing 2FA
+support](https://github.com/yarnpkg/yarn/issues/4904), you might need to use
+`npm` just for this publishing process instead:
+
+    npm publish --access public
+
+## Publishing the style guide
+
+The styleguide is separate to the `npm` package and can be built like so:
+
+    yarn styleguide:build
+
+Now, copy files located within `styleguide/` to your static web host via a
+command like:
+
+    rsync --progress --delete -a styleguide/ host.example.com:/path/to/files/
 
 ## Upgrading
 
