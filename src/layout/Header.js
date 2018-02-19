@@ -18,13 +18,13 @@ export default class Header extends Component {
     // TODO: Could add lots more varities here (JCUS, etc)
     switch (logo) {
       case 'mono':
-        logo = 'https://cdn.web.jcu.io/1.0.0-beta.1/images/jcua-logo-mono.svg'
+        logo = 'https://cdn.jcu.edu.au/1.0.0-beta.1/images/jcua-logo-mono.svg'
         break
       case 'mono-reversed':
-        logo = 'https://cdn.web.jcu.io/1.0.0-beta.1/images/jcua-logo-mono-reversed.svg'
+        logo = 'https://cdn.jcu.edu.au/1.0.0-beta.1/images/jcua-logo-mono-reversed.svg'
         break
       case 'colour':
-        logo = 'https://cdn.web.jcu.io/1.0.0-beta.1/images/jcua-logo-colour.svg'
+        logo = 'https://cdn.jcu.edu.au/1.0.0-beta.1/images/jcua-logo-colour.svg'
         break
       default:
         break
