@@ -35,16 +35,22 @@ interface using the commands respectively:
 
 ## Building the library
 
-To build the underlying library for inclusion in other projects or for
-publishing to the `npm` package registry:
+To build the underlying JavaScript library for inclusion in other projects or
+for publishing to the `npm` package registry:
 
-    yarn build
+    yarn compile
 
 You can now use the build in other projects locally (such as via `yarn link`).
+
+## Publishing the library
+
 When you are ready to publish, do this:
 
     # Update CHANGELOG.md and package.json and commit changes first!
     yarn publish --access public
+
+This process automatically runs `yarn compile` via the `prepublish` script
+within `package.json` so you don't need to remember to do it.
 
 Due to `yarn` [missing 2FA
 support](https://github.com/yarnpkg/yarn/issues/4904), you might need to use

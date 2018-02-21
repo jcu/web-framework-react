@@ -5,13 +5,14 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "styleguidist server",
-    "build": "NODE_ENV=production babel --out-dir lib --copy-files --ignore 'src/styleguide,src/setupTests.js,*.test.js' src/",
-    "watch": "yarn build --watch",
+    "compile": "NODE_ENV=production babel --out-dir lib --copy-files --ignore 'src/styleguide,src/setupTests.js,*.test.js' src/",
+    "watch": "yarn compile --watch",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "styleguide": "yarn start",
     "styleguide:build": "styleguidist build",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "prepublish": "yarn compile"
   },
   "babel": {
     "presets": [
