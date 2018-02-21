@@ -10,7 +10,7 @@ cache:
 script:
   # Jest-based tests
   - yarn test
-  # Lib build
-  - yarn build
+  # Lib compilation
+  - yarn compile
   # Styleguidist build
   - yarn styleguide:build
