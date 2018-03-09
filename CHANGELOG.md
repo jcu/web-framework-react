@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.3] - 2018-03-09
+
 ### Fixed
 
 * Made `Table` component responsive by default.  This was the intended design
