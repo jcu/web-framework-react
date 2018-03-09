@@ -20,6 +20,18 @@ test('renders with options', () => {
   shallow(<Table data={data} columns={columns} sortable />)
 })
 
+test('renders responsive', () => {
+  const hack = mount(<div><Table data={data} columns={columns} responsive /></div>)
+  const tableWrapper = hack.children()
+  expect(tableWrapper.children().first()).toMatchSelector('div.table-responsive')
+})
+
+test('renders unresponive', () => {
+  const hack = mount(<div><Table data={data} columns={columns} responsive={false} /></div>)
+  const table = hack.children()
+  expect(table.children().first()).toHaveTagName('table')
+})
+
 test('renders table contents', () => {
   const table = shallow(<Table data={data} columns={columns} />)
 

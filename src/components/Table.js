@@ -9,7 +9,8 @@ export default class Table extends Component {
     renderers: PropTypes.object,
     columns: PropTypes.array.isRequired,
     rowKey: PropTypes.func,
-    sortable: PropTypes.bool
+    sortable: PropTypes.bool,
+    responsive: PropTypes.bool
   }
 
   static defaultProps = {
@@ -17,7 +18,8 @@ export default class Table extends Component {
     data: [],
     renderers: {},
     columns: [],
-    sortable: true
+    sortable: true,
+    responsive: true
   }
 
   constructor (props) {
@@ -74,7 +76,7 @@ export default class Table extends Component {
       })
     }
 
-    return (
+    const table = (
       <table className={'table ' + this.props.className}>
         <thead>
           <tr>
@@ -112,6 +114,15 @@ export default class Table extends Component {
           )}
         </tbody>
       </table>
+    )
+
+    return (
+      <React.Fragment>
+        {this.props.responsive
+          ? <div className="table-responsive">{table}</div>
+          : table
+        }
+      </React.Fragment>
     )
   }
 }
