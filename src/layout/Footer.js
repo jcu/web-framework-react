@@ -11,6 +11,7 @@ export default class Footer extends Component {
                 Copyright &copy; 1995 to {(new Date()).getFullYear()} James Cook University.  All rights reserved.
               </li>
               <li className="list-inline-item">ABN 46253211955</li>
+              <li className="list-inline-item">CRICOS Provider Code 00117J</li>
             </ul>
           </div>
         </div>

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+* Added CRICOS code to Footer.
+
 ## [0.1.3] - 2018-03-09
 
 ### Fixed
