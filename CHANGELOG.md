@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.5] - 2018-04-03
+
 ### Fixed
 
 * Use indexOf for strings in Buttons and Card examples. This fixes support in
