@@ -48,8 +48,8 @@ export default class Button extends Component {
     delete cleanProps.inProgress
 
     var indicatorVariation = 'light'
-    if (this.props.variation.includes('secondary') ||
-      this.props.variation.includes('outline')) {
+    if (this.props.variation.indexOf('secondary') !== -1 ||
+      this.props.variation.indexOf('outline') !== -1) {
       indicatorVariation = 'dark'
     }
 

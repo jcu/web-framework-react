@@ -14,7 +14,7 @@ All of the available variations are demonstrated here:
   <Card
     key={i}
     variation={variation}
-    className={(variation && variation.includes('inverse')) ? 'bg-inverse' : null}>
+    className={(variation && variation.indexOf('inverse') !== -1) ? 'bg-inverse' : null}>
     <h3 className="card-title">Card Title</h3>
     <p className="card-text">
       This is a card with <code>variation=&quot;{variation}&quot;</code>
