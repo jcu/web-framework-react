@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.6] - 2018-04-12
+
 ### Fixed
 
 * `Button` now allows a `type` prop to be passed through to the DOM element.
