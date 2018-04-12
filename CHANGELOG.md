@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+* `Button` now allows a `type` prop to be passed through to the DOM element.
+* Prevent `className` being doubled up on `Button`.
+* Prevent `variation` being passed through to `Button`'s DOM element'.
+
 ## [0.1.5] - 2018-04-03
 
 ### Fixed

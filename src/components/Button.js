@@ -41,7 +41,8 @@ export default class Button extends Component {
 
     const cleanProps = Object.assign({}, this.props)
     delete cleanProps.disabled
-    delete cleanProps.type
+    delete cleanProps.className
+    delete cleanProps.variation
     if (this.props.inProgress) {
       delete cleanProps.onClick
     }

@@ -29,11 +29,18 @@ test('renders child nodes', () => {
 
 test('set up correctly', () => {
   const button = shallow(
-    <Button variation='warning' className="extra">Click me</Button>
+    <Button
+      variation='warning'
+      className="extra"
+      type='submit'
+      title='Dummy'>Click me</Button>
   )
   expect(button.type()).toBe('button')
   expect(button.hasClass('btn-warning')).toBe(true)
   expect(button.hasClass('extra')).toBe(true)
+  expect(button.prop('type')).toBe('submit')
+  expect(button.prop('title')).toBe('Dummy')
+  expect(button.prop('variation')).toBeUndefined()
   expect(button.text()).toBe('Click me')
 })
 
