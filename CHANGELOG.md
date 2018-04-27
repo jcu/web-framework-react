@@ -7,26 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+* **Footer** now accepts a `version` prop to include your app version, and 
+  a `versionUrl` prop if you want the version number to be a link.  Works
+  great if you use dotenv (see **Footer** docs for more)
+
 ## [0.1.6] - 2018-04-12
 
 ### Fixed
 
-* `Button` now allows a `type` prop to be passed through to the DOM element.
-* Prevent `className` being doubled up on `Button`.
-* Prevent `variation` being passed through to `Button`'s DOM element'.
+* **Button** now allows a `type` prop to be passed through to the DOM element.
+* Prevent `className` being doubled up on **Button**.
+* Prevent `variation` being passed through to **Button**'s DOM element.
 
 ## [0.1.5] - 2018-04-03
 
 ### Fixed
 
-* Use indexOf for strings in Buttons and Card examples. This fixes support in
+* Use `indexOf` for strings in **Buttons** and **Card** examples. This fixes support in
   old versions of IE.
 
 ## [0.1.4] - 2018-03-22
 
 ### Fixed
 
-* Added CRICOS code to Footer.
+* Added CRICOS code to **Footer**.
 
 ## [0.1.3] - 2018-03-09
 
@@ -37,7 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.2] - 2018-02-19
 
-### Addded
+### Added
 
 * Added CHANGELOG.md.
 
