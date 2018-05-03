@@ -27,9 +27,9 @@ export default class Alert extends Component {
     }
   }
 
-  handleDismiss = (event) => {
+  handleDismiss = event => {
     event.preventDefault()
-    this.setState({isDissmissed: true})
+    this.setState({ isDissmissed: true })
   }
 
   render () {
@@ -38,12 +38,17 @@ export default class Alert extends Component {
     }
 
     return (
-      <div className={'alert alert-' + this.props.variation} role="alert">
-        {this.props.isDismissable &&
-        <button type="button" className="close" aria-label="Close" onClick={this.handleDismiss}>
-          <span aria-hidden="true">&times;</span>
-        </button>
-        }
+      <div className={'alert alert-' + this.props.variation} role='alert'>
+        {this.props.isDismissable && (
+          <button
+            type='button'
+            className='close'
+            aria-label='Close'
+            onClick={this.handleDismiss}
+          >
+            <span aria-hidden='true'>&times;</span>
+          </button>
+        )}
         {this.props.children}
       </div>
     )

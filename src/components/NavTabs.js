@@ -12,7 +12,7 @@ export default class NavTabs extends Component {
     }
 
     return (
-      <ul className="nav nav-tabs m-b-2" role="tablist">
+      <ul className='nav nav-tabs m-b-2' role='tablist'>
         {this.props.children}
       </ul>
     )

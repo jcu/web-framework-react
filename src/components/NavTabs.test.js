@@ -15,8 +15,8 @@ test('do not render if empty', () => {
 test('renders children', () => {
   const navTabs = shallow(
     <NavTabs>
-      <NavTab to="/">Home</NavTab>
-      <NavTab to="/about">About</NavTab>
+      <NavTab to='/'>Home</NavTab>
+      <NavTab to='/about'>About</NavTab>
     </NavTabs>
   )
   expect(navTabs.children()).toHaveLength(2)

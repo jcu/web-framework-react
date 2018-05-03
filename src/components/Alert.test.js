@@ -18,8 +18,12 @@ test('do not render if empty', () => {
 test('renders child nodes', () => {
   const alert = shallow(
     <Alert variation='warning' isDismissable={false}>
-      <a className='dummy'>Link</a>
-      <a className='dummy'>Link 2</a>
+      <a className='dummy' href='#dummy'>
+        Link
+      </a>
+      <a className='dummy' href='#dummy'>
+        Link 2
+      </a>
       Watch out!
     </Alert>
   )
@@ -29,7 +33,9 @@ test('renders child nodes', () => {
 
 test('set up correctly', () => {
   const alert = shallow(
-    <Alert variation='warning' isDismissable={false}>Watch out!</Alert>
+    <Alert variation='warning' isDismissable={false}>
+      Watch out!
+    </Alert>
   )
   expect(alert.type()).toBe('div')
   expect(alert.hasClass('alert-warning')).toBe(true)
@@ -37,13 +43,11 @@ test('set up correctly', () => {
 })
 
 test('is dismissable', () => {
-  const alert = shallow(
-    <Alert isDismissable>Watch out!</Alert>
-  )
+  const alert = shallow(<Alert isDismissable>Watch out!</Alert>)
   let closeButton = alert.find('.close')
   expect(closeButton.exists()).toBe(true)
 
   expect(alert.html()).not.toBeNull()
-  closeButton.simulate('click', {preventDefault: () => {}})
+  closeButton.simulate('click', { preventDefault: () => {} })
   expect(alert.html()).toBeNull()
 })

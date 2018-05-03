@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "styleguidist server",
-    "compile": "NODE_ENV=production babel --out-dir lib --copy-files --ignore 'src/styleguide,src/setupTests.js,*.test.js' src/",
+    "compile":
+      "NODE_ENV=production babel --out-dir lib --copy-files --ignore 'src/styleguide,src/setupTests.js,*.test.js' src/",
     "watch": "yarn compile --watch",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
@@ -15,13 +16,8 @@
     "prepublish": "yarn compile"
   },
   "babel": {
-    "presets": [
-      "env",
-      "react-app"
-    ],
-    "ignore": [
-      "src/styleguide"
-    ]
+    "presets": ["env", "react-app"],
+    "ignore": ["src/styleguide"]
   },
   "lint-staged": {
     "*.js": [
@@ -42,8 +38,10 @@
     "enzyme-to-json": "^3.2.2",
     "eslint": "4.15.0",
     "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-config-standard-react": "^6.0.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jest": "^21.12.1",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-node": "^6.0.0",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.6.1",

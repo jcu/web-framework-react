@@ -29,11 +29,9 @@ test('renders child nodes', () => {
 
 test('set up correctly', () => {
   const button = shallow(
-    <Button
-      variation='warning'
-      className="extra"
-      type='submit'
-      title='Dummy'>Click me</Button>
+    <Button variation='warning' className='extra' type='submit' title='Dummy'>
+      Click me
+    </Button>
   )
   expect(button.type()).toBe('button')
   expect(button.hasClass('btn-warning')).toBe(true)
@@ -46,27 +44,23 @@ test('set up correctly', () => {
 
 test('configured events occur', () => {
   let result
-  function click () { result = 'success' }
-  const button = shallow(
-    <Button onClick={click}>Click me</Button>
-  )
+  function click () {
+    result = 'success'
+  }
+  const button = shallow(<Button onClick={click}>Click me</Button>)
   expect(result).toBeUndefined()
   button.simulate('click')
   expect(result).toBe('success')
 })
 
 test('does not show progress', () => {
-  const button = shallow(
-    <Button>Sending&hellip;</Button>
-  )
+  const button = shallow(<Button>Sending&hellip;</Button>)
   let indicator = button.find('ActivityIndicator')
   expect(indicator.exists()).toBe(false)
 })
 
 test('indicates progress', () => {
-  const button = shallow(
-    <Button inProgress>Sending&hellip;</Button>
-  )
+  const button = shallow(<Button inProgress>Sending&hellip;</Button>)
   let indicator = button.find('ActivityIndicator')
   expect(indicator.exists()).toBe(true)
 })

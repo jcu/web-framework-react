@@ -7,8 +7,8 @@ test('renders without crashing', () => {
 })
 
 test('render logo variations', () => {
-  shallow(<Header logo="mono" />)
-  shallow(<Header logo="colour" />)
+  shallow(<Header logo='mono' />)
+  shallow(<Header logo='colour' />)
 })
 
 test('links to app url', () => {
@@ -18,19 +18,17 @@ test('links to app url', () => {
 })
 
 test('shows logo variation', () => {
-  const header = shallow(<Header logo="mono" />)
+  const header = shallow(<Header logo='mono' />)
   expect(header.find('img').html()).toMatch('mono')
 })
 
 test('shows custom logo url', () => {
   const logoUrl = 'https://example.com/logo.svg'
-  const header = shallow(
-    <Header logo={logoUrl} />
-  )
+  const header = shallow(<Header logo={logoUrl} />)
   expect(header.find('img').html()).toMatch(logoUrl)
 })
 
 test('shows app name', () => {
-  const header = shallow(<Header appName="Hello world" />)
+  const header = shallow(<Header appName='Hello world' />)
   expect(header.contains('Hello world')).toBe(true)
 })

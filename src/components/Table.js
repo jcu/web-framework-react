@@ -81,47 +81,65 @@ export default class Table extends Component {
         <thead>
           <tr>
             {this.props.columns.map(column => {
-              const isSortable = this.props.sortable && column.sortable !== false
+              const isSortable =
+                this.props.sortable && column.sortable !== false
               const isSortColumn = this.state.sortOrder.column === column.id
               return (
                 <th
                   key={column.id}
-                  onClick={isSortable
-                    ? event => this.handleHeaderClick(column.id, event)
-                    : undefined}
-                  style={isSortable
-                    ? { cursor: 'pointer',
-                      userSelect: 'none',
-                      MozUserSelect: 'none',
-                      WebkitUserSelect: 'none' }
-                    : null}>
-                  {column.display || column.id}
-                  {isSortable && (isSortColumn
-                    ? (<span className="text-primary">{this.state.sortOrder.direction === 'asc' ? '\u00A0▲' : '\u00A0▼'}</span>)
-                    : (<span style={{visibility: 'hidden'}}>&nbsp;▼</span>))
+                  onClick={
+                    isSortable
+                      ? event => this.handleHeaderClick(column.id, event)
+                      : undefined
                   }
-                </th>)
+                  style={
+                    isSortable
+                      ? {
+                        cursor: 'pointer',
+                        userSelect: 'none',
+                        MozUserSelect: 'none',
+                        WebkitUserSelect: 'none'
+                      }
+                      : null
+                  }
+                >
+                  {column.display || column.id}
+                  {isSortable &&
+                    (isSortColumn ? (
+                      <span className='text-primary'>
+                        {this.state.sortOrder.direction === 'asc'
+                          ? '\u00A0▲'
+                          : '\u00A0▼'}
+                      </span>
+                    ) : (
+                      <span style={{ visibility: 'hidden' }}>&nbsp;▼</span>
+                    ))}
+                </th>
+              )
             })}
           </tr>
         </thead>
         <tbody>
-          {data.map((row, index) =>
+          {data.map((row, index) => (
             <tr key={this.props.rowKey ? this.props.rowKey(row, index) : index}>
-              {this.props.columns.map(column =>
-                <td key={column.id}>{this.renderColumn(column.id, row[column.id], row, data)}</td>
-              )}
+              {this.props.columns.map(column => (
+                <td key={column.id}>
+                  {this.renderColumn(column.id, row[column.id], row, data)}
+                </td>
+              ))}
             </tr>
-          )}
+          ))}
         </tbody>
       </table>
     )
 
     return (
       <React.Fragment>
-        {this.props.responsive
-          ? <div className="table-responsive">{table}</div>
-          : table
-        }
+        {this.props.responsive ? (
+          <div className='table-responsive'>{table}</div>
+        ) : (
+          table
+        )}
       </React.Fragment>
     )
   }

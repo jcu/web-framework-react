@@ -12,6 +12,6 @@ test('renders without crashing', () => {
 })
 
 test('renders with options', () => {
-  const navItem = shallow(<NavItem className="pull-right">Home</NavItem>)
+  const navItem = shallow(<NavItem className='pull-right'>Home</NavItem>)
   expect(navItem.hasClass('pull-right')).toBe(true)
 })
