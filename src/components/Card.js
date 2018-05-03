@@ -21,12 +21,10 @@ export default class Card extends Component {
       return null
     }
 
-    let variation = this.props.variation ? (' card-' + this.props.variation) : ''
+    let variation = this.props.variation ? ' card-' + this.props.variation : ''
     return (
       <div className={`card ${variation} ${this.props.className}`}>
-        <div className="card-block">
-          {this.props.children}
-        </div>
+        <div className='card-block'>{this.props.children}</div>
       </div>
     )
   }

@@ -20,38 +20,44 @@ export default class ErrorBoundary extends React.Component {
     this.state = { hasError: false }
   }
 
-  componentDidCatch (error, info) { // eslint-disable-line handle-callback-err
+  // eslint-disable-next-line handle-callback-err
+  componentDidCatch (error, info) {
     this.setState({ hasError: true, details: arguments })
   }
 
   render () {
     if (this.state.hasError) {
       return (
-        <div className="container m-t-3">
-          <div className="row">
-            <div className="col-xs-10 col-xs-push-1">
-              <Alert type="danger" isDismissable={false}>
-                <p className="lead">
-                  Oops!  An error occurred within this app.
-                </p>
+        <div className='container m-t-3'>
+          <div className='row'>
+            <div className='col-xs-10 col-xs-push-1'>
+              <Alert type='danger' isDismissable={false}>
+                <p className='lead'>Oops! An error occurred within this app.</p>
                 <p>
-                  You can try{' '}
-                  <a href={window.location.href}>reloading</a> the page to
-                  see if that fixes the issue.
+                  You can try <a href={window.location.href}>reloading</a> the
+                  page to see if that fixes the issue.
                 </p>
-                <p className="m-b-2">
+                <p className='m-b-2'>
                   If the problem persists, contact the{' '}
                   <a href={this.props.helpUrl}>{this.props.helpContact}</a> and
-                  let us know about your issue, including the URL you&apos;re on.
-                  You can copy and paste the following:
+                  let us know about your issue, including the URL you&apos;re
+                  on. You can copy and paste the following:
                 </p>
                 <pre>
-                  App: {this.props.appName}{'\n'}
-                  {this.props.appContact &&
-                      <React.Fragment>App Contact: {this.props.appContact}{'\n'}</React.Fragment>}
-                  URL: {window.location.href}{'\n'}
-                  Browser: {navigator.userAgent}{'\n'}
-                  Details: [tell us what you were trying to do and what happened]
+                  App: {this.props.appName}
+                  {'\n'}
+                  {this.props.appContact && (
+                    <React.Fragment>
+                      App Contact: {this.props.appContact}
+                      {'\n'}
+                    </React.Fragment>
+                  )}
+                  URL: {window.location.href}
+                  {'\n'}
+                  Browser: {navigator.userAgent}
+                  {'\n'}
+                  Details: [tell us what you were trying to do and what
+                  happened]
                 </pre>
                 <p>Thanks for your patience!</p>
               </Alert>

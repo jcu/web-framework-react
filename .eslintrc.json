@@ -9,8 +9,11 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:jest/recommended",
-    "standard"
+    "plugin:jsx-a11y/recommended",
+    "standard",
+    "standard-react"
   ],
+  "plugins": ["react", "jsx-a11y", "jest"],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
@@ -19,11 +22,15 @@
     },
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "jest"
-  ],
   "rules": {
-    "linebreak-style": ["error", "unix"]
+    "linebreak-style": ["error", "unix"],
+    "jsx-a11y/label-has-for": [
+      2,
+      {
+        "required": {
+          "every": ["id"]
+        }
+      }
+    ]
   }
 }

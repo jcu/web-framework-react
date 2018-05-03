@@ -8,7 +8,7 @@ test('renders without crashing', () => {
 
 test('shows current year', () => {
   const footer = shallow(<Footer />)
-  const currentYear = (new Date()).getFullYear()
+  const currentYear = new Date().getFullYear()
   expect(footer.contains(currentYear)).toBe(true)
 })
 
@@ -51,7 +51,7 @@ test('handles boolean version prop values', () => {
   let footer = shallow(<Footer version={false} />)
   expect(footer.find('.footer-version')).toHaveLength(0)
 
-  footer = shallow(<Footer version={true} />)
+  footer = shallow(<Footer version />)
   expect(footer.find('.footer-version')).toHaveLength(1)
 })
 
