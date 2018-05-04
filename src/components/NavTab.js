@@ -13,15 +13,16 @@ export default class NavTab extends Component {
 
   render () {
     return (
-      <NavItem
-        key={this.props.to}
-        className={this.props.className}>
+      <NavItem key={this.props.to} className={this.props.className}>
         <NavLink
           to={this.props.to}
-          activeClassName="active"
+          activeClassName='active'
           exact={this.props.exact}
-          className="nav-link"
-          role="tab">{this.props.children}</NavLink>
+          className='nav-link'
+          role='tab'
+        >
+          {this.props.children}
+        </NavLink>
       </NavItem>
     )
   }

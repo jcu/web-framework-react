@@ -5,7 +5,6 @@ export default class TabPane extends Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
     activeTab: PropTypes.string,
-    requiresLogin: PropTypes.bool,
     children: PropTypes.node
   }
 
@@ -16,7 +15,7 @@ export default class TabPane extends Component {
     }
 
     return (
-      <div className={elementClass} role="tabpanel">
+      <div className={elementClass} role='tabpanel'>
         {this.props.children}
       </div>
     )

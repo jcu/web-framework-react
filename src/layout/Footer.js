@@ -4,10 +4,7 @@ import PropTypes from 'prop-types'
 export default class Footer extends Component {
   static propTypes = {
     /** Include a version number (defaults to the app version, otherwise specify a string) */
-    version: PropTypes.oneOfType([
-      PropTypes.bool,
-      PropTypes.string
-    ]),
+    version: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
     /** Displayed version number will be a link to this URL */
     versionUrl: PropTypes.string
   }
@@ -47,20 +44,25 @@ export default class Footer extends Component {
         versionTag = <a href={this.props.versionUrl}>{versionTag}</a>
       }
       // TODO: bootstrap 'pull-*-right' will become 'float-*-right'
-      versionTag = <div className="footer-version pull-xs-right float-xs-right">{versionTag}</div>
+      versionTag = (
+        <div className='footer-version pull-xs-right float-xs-right'>
+          {versionTag}
+        </div>
+      )
     }
 
     return (
-      <footer className="container jcu-footer">
-        <div className="row jcu-colophon">
-          <div className="col-xs-12">
+      <footer className='container jcu-footer'>
+        <div className='row jcu-colophon'>
+          <div className='col-xs-12'>
             {versionTag}
-            <ul className="list-inline">
-              <li className="list-inline-item">
-                Copyright &copy; 1995 to {(new Date()).getFullYear()} James Cook University.  All rights reserved.
+            <ul className='list-inline'>
+              <li className='list-inline-item'>
+                Copyright &copy; 1995 to {new Date().getFullYear()} James Cook
+                University. All rights reserved.
               </li>
-              <li className="list-inline-item">ABN 46253211955</li>
-              <li className="list-inline-item">CRICOS Provider Code 00117J</li>
+              <li className='list-inline-item'>ABN 46253211955</li>
+              <li className='list-inline-item'>CRICOS Provider Code 00117J</li>
             </ul>
           </div>
         </div>

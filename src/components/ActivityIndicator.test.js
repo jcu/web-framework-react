@@ -16,6 +16,6 @@ test('set up correctly', () => {
 })
 
 test('different types', () => {
-  const indicator = shallow(<ActivityIndicator variation="light" />)
+  const indicator = shallow(<ActivityIndicator variation='light' />)
   expect(indicator.type()).toBe('img')
 })

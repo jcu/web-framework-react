@@ -9,9 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-* **Footer** now accepts a `version` prop to include your app version, and 
-  a `versionUrl` prop if you want the version number to be a link.  Works
+* **Footer** now accepts a `version` prop to include your app version, and
+  a `versionUrl` prop if you want the version number to be a link. Works
   great if you use dotenv (see **Footer** docs for more)
+
+### Changed
+
+* Reformat code according to StandardJS.
+* Removed unused prop in **NavTab** component. This is a non-breaking change
+  as it was never used at all.
 
 ## [0.1.6] - 2018-04-12
 
@@ -38,7 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-* Made `Table` component responsive by default.  This was the intended design
+* Made `Table` component responsive by default. This was the intended design
   for this component.
 
 ## [0.1.2] - 2018-02-19

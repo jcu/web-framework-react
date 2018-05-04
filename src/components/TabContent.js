@@ -11,10 +11,6 @@ export default class TabContent extends Component {
       return null
     }
 
-    return (
-      <div className="tab-content">
-        {this.props.children}
-      </div>
-    )
+    return <div className='tab-content'>{this.props.children}</div>
   }
 }

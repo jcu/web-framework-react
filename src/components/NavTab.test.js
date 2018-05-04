@@ -3,19 +3,21 @@ import { shallow } from 'enzyme'
 import NavTab from './NavTab'
 
 test('renders without crashing', () => {
-  shallow(<NavTab to="/">Home</NavTab>)
+  shallow(<NavTab to='/'>Home</NavTab>)
 })
 
 test('renders with options', () => {
   shallow(
-    <NavTab to="/" exact={false}>Home</NavTab>
+    <NavTab to='/' exact={false}>
+      Home
+    </NavTab>
   )
 })
 
 test('renders children', () => {
   const navTab = shallow(
-    <NavTab to="/">
-      <img src="icon.svg" />
+    <NavTab to='/'>
+      <img src='icon.svg' alt='Test icon' />
       <b>Home</b>
     </NavTab>
   )
