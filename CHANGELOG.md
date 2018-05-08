@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+* ...
+
+### Changed
+
+* ...
+
+## [0.1.7] - 2018-05-08
+
+### Added
+
 * **Footer** now accepts a `version` prop to include your app version, and
   a `versionUrl` prop if you want the version number to be a link. Works
   great if you use dotenv (see **Footer** docs for more)

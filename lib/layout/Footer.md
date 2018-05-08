@@ -18,6 +18,5 @@ REACT_APP_VERSION=$npm_package_version
 You may supply a version string directly, and an optional URL the version should link to. 
 
 ```jsx
-<Footer version="1970-04-20v0" versionUrl="https://web.jcu.io/v2/#footer" />
+<Footer version='1970-04-20v0' versionUrl='https://web.jcu.io/v2/#footer' />
 ```
-
